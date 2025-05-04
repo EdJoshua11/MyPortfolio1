@@ -47,28 +47,28 @@ const Projects = () => {
       title: "WESMAARRDEC Website",
       description:
         "A comprehensive website for Western Mindanao Agriculture, Aquatic and Natural Resources Research and Development Consortium featuring information about their programs, research, and partnerships.",
-      image: "/images/project1.png",
+      image: "/images/project1.jpg",
     },
     {
       id: 2,
       title: "Blood Bank Management System",
       description:
         "An interactive dashboard for blood bank administrators to track donations, manage inventory, and monitor blood supply statistics with real-time updates and filtering capabilities.",
-      image: "/images/project2.png",
+      image: "/images/project2.jpg",
     },
     {
       id: 3,
       title: "Pokédex Application",
       description:
         "A web-based Pokémon encyclopedia allowing users to browse, search, and learn about different Pokémon species with a responsive design and intuitive navigation.",
-      image: "/images/project3.png",
+      image: "/images/project3.jpg",
     },
     {
       id: 4,
       title: "Scientific Calculator",
       description:
         "A feature-rich scientific calculator web application supporting advanced mathematical functions, calculation history, and memory operations with a clean, modern interface.",
-      image: "/images/project4.png",
+      image: "/images/project4.jpg",
     },
   ]
 
