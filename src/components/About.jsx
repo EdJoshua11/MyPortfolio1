@@ -1,47 +1,56 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import "../style/About.css"
+import { useEffect, useRef } from "react";
+import "../style/About.css";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
 
 const About = () => {
-  const sectionRef = useRef(null)
-  const skillsRef = useRef(null)
-  const techStackRef = useRef(null)
-  const experienceRef = useRef(null)
+  const sectionRef = useRef(null);
+  const skillsRef = useRef(null);
+  const techStackRef = useRef(null);
+  const experienceRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("active")
+            entry.target.classList.add("active");
           }
-        })
+        });
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    const skillElements = skillsRef.current?.querySelectorAll(".skill-item")
+    const skillElements = skillsRef.current?.querySelectorAll(".skill-item");
     if (skillElements) {
-      skillElements.forEach((el) => observer.observe(el))
+      skillElements.forEach((el) => observer.observe(el));
     }
 
-    const techElements = techStackRef.current?.querySelectorAll(".tech-item")
+    const techElements = techStackRef.current?.querySelectorAll(".tech-item");
     if (techElements) {
-      techElements.forEach((el) => observer.observe(el))
+      techElements.forEach((el) => observer.observe(el));
     }
 
-    const expElements = experienceRef.current?.querySelectorAll(".timeline-item")
+    const expElements =
+      experienceRef.current?.querySelectorAll(".timeline-item");
     if (expElements) {
-      expElements.forEach((el) => observer.observe(el))
+      expElements.forEach((el) => observer.observe(el));
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="about" className="about-section">
@@ -54,29 +63,39 @@ const About = () => {
         <div className="about-content" ref={sectionRef}>
           <div className="about-text">
             <p>
-              Hi, I'm <span className="highlight">Ed Joshua Ladores</span>, a passionate{" "}
-              <span className="highlight">System Analyst</span> with a keen eye for solving complex business problems
-              through technology. I specialize in bridging the gap between business needs and technical solutions,
-              translating requirements into functional systems that drive efficiency and innovation.
+              Hi, I'm <span className="highlight">Ed Joshua Ladores</span>, a
+              passionate <span className="highlight">Frontend Developer</span> with
+              a keen eye for solving complex business problems through
+              technology. I specialize in bridging the gap between business
+              needs and technical solutions, translating requirements into
+              functional systems that drive efficiency and innovation.
             </p>
             <p>
-              With a background in both technical development and business analysis, I excel at understanding
-              stakeholder needs and designing systems that not only meet current requirements but are also scalable for
-              future growth. I'm dedicated to creating intuitive, user-friendly solutions that simplify complex
-              processes.
+              With a background in both technical development and business
+              analysis, I excel at understanding stakeholder needs and designing
+              systems that not only meet current requirements but are also
+              scalable for future growth. I'm dedicated to creating intuitive,
+              user-friendly solutions that simplify complex processes.
             </p>
             <p>
-              <span className="highlight">My Personal Goal</span> is to continue growing as a system analyst while
-              helping organizations leverage technology to achieve their strategic objectives. I aim to stay at the
-              forefront of emerging technologies and methodologies, particularly in data analytics and process
-              automation, to deliver increasingly valuable solutions to the organizations I work with.
+              <span className="highlight">My Personal Goal</span> is to continue
+              growing as a Frontend Developer while helping organizations leverage
+              technology to achieve their strategic objectives. I aim to stay at
+              the forefront of emerging technologies and methodologies,
+              particularly in data analytics and process automation, to deliver
+              increasingly valuable solutions to the organizations I work with.
             </p>
             <p>
-              As an IT student at <span className="highlight">Western Mindanao State University</span>, I'm not only
-              fascinated by the technical aspects of computing but also by the power of collaboration in creating
-              impactful solutions. I thrive in team environments, bringing strong communication and problem-solving
-              skills to group projects. I'm eager to contribute my technical understanding and collaborative spirit to
-              future endeavors in the IT field.
+              As an IT student at{" "}
+              <span className="highlight">
+                Western Mindanao State University
+              </span>
+              , I'm not only fascinated by the technical aspects of computing
+              but also by the power of collaboration in creating impactful
+              solutions. I thrive in team environments, bringing strong
+              communication and problem-solving skills to group projects. I'm
+              eager to contribute my technical understanding and collaborative
+              spirit to future endeavors in the IT field.
             </p>
           </div>
         </div>
@@ -86,147 +105,28 @@ const About = () => {
           <h3>Tech Stack</h3>
           <div className="tech-stack-grid">
             <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </div>
-              <span className="tech-name">SQL</span>
+              <FaHtml5 size={30} color="#e34c26" />
+              <span className="tech-name">HTML</span>
             </div>
             <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <span className="tech-name">Python</span>
+              <FaCss3Alt size={30} color="#264de4" />
+              <span className="tech-name">CSS</span>
             </div>
             <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                  <path d="M2 17l10 5 10-5"></path>
-                  <path d="M2 12l10 5 10-5"></path>
-                </svg>
-              </div>
-              <span className="tech-name">SAP</span>
+              <FaJsSquare size={30} color="#f0db4f" />
+              <span className="tech-name">JavaScript</span>
             </div>
             <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="9" x2="21" y2="9"></line>
-                  <line x1="9" y1="21" x2="9" y2="9"></line>
-                </svg>
-              </div>
-              <span className="tech-name">Tableau</span>
+              <FaReact size={30} color="#61DBFB" />
+              <span className="tech-name">React</span>
             </div>
             <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M18 10h-4V6"></path>
-                  <path d="M14 10l7-7"></path>
-                  <path d="M3 21l7-7"></path>
-                </svg>
-              </div>
-              <span className="tech-name">Power BI</span>
+              <FaGitAlt size={30} color="#f1502f" />
+              <span className="tech-name">Git</span>
             </div>
             <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <span className="tech-name">MS Office</span>
-            </div>
-            <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                  <path d="M2 17l10 5 10-5"></path>
-                  <path d="M2 12l10 5 10-5"></path>
-                </svg>
-              </div>
-              <span className="tech-name">JIRA</span>
-            </div>
-            <div className="tech-item">
-              <div className="tech-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                </svg>
-              </div>
-              <span className="tech-name">Visio</span>
+              <FaGithub size={30} color="#333" />
+              <span className="tech-name">GitHub</span>
             </div>
           </div>
         </div>
@@ -238,51 +138,31 @@ const About = () => {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <div className="timeline-date">2020 - Present</div>
-                <h4 className="timeline-title">Senior System Analyst</h4>
-                <div className="timeline-company">Tech Solutions Inc.</div>
+                <div className="timeline-date">2023-2024</div>
+                <h4 className="timeline-title">Software Engineering Passer</h4>
+                <div className="timeline-company">WESMARDC</div>
                 <p className="timeline-description">
-                  Lead system analysis for enterprise clients, designing and implementing complex business solutions.
-                  Managed a team of junior analysts and coordinated with development teams to ensure successful project
-                  delivery.
-                </p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <div className="timeline-date">2017 - 2020</div>
-                <h4 className="timeline-title">System Analyst</h4>
-                <div className="timeline-company">Global Systems Corporation</div>
-                <p className="timeline-description">
-                  Analyzed business requirements and translated them into technical specifications. Collaborated with
-                  stakeholders to optimize business processes and implement ERP solutions across multiple departments.
-                </p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <div className="timeline-date">2015 - 2017</div>
-                <h4 className="timeline-title">Business Analyst</h4>
-                <div className="timeline-company">Innovative Solutions Ltd.</div>
-                <p className="timeline-description">
-                  Gathered and documented business requirements, created process flow diagrams, and assisted in system
-                  implementation. Conducted user acceptance testing and provided training to end users.
+                  I successfully passed my Software Engineering subject by
+                  developing a Blood Donation App, a mobile application designed
+                  to connect blood donors with recipients in need. The app
+                  streamlines the process of locating nearby donors, scheduling
+                  donations, and spreading awareness about the importance of
+                  blood donation. Through this project, I applied core software
+                  engineering principles such as requirements analysis, system
+                  design, prototyping, and testing to create a meaningful and
+                  socially impactful solution.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
         <div className="skills-container" ref={skillsRef}>
-          <h3>Skills & Expertise</h3>
+          <h3>Skills & Tools</h3>
 
           <div className="skills-grid">
             <div className="skill-item">
               <div className="skill-icon">
+                {/* Code Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -292,16 +172,19 @@ const About = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  <path d="M16 18l6-6-6-6"></path>
+                  <path d="M8 6L2 12l6 6"></path>
                 </svg>
               </div>
-              <h4>Business Analysis</h4>
-              <p>Requirements Gathering, Process Modeling, Gap Analysis, BPMN, UML</p>
+              <h4>Frontend Development</h4>
+              <p>
+                HTML, CSS, JavaScript, React.js, Responsive Design
+              </p>
             </div>
 
             <div className="skill-item">
               <div className="skill-icon">
+                {/* Paint Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -311,15 +194,21 @@ const About = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  <path d="M19 11H5a2 2 0 0 0-2 2v4h18v-4a2 2 0 0 0-2-2z"></path>
+                  <path d="M5 11V7a2 2 0 0 1 2-2h2"></path>
+                  <path d="M7 7V5a2 2 0 1 1 4 0v2"></path>
                 </svg>
               </div>
-              <h4>System Design</h4>
-              <p>System Architecture, Database Design, API Integration, Workflow Optimization</p>
+              <h4>UI/UX Design</h4>
+              <p>
+                Figma (Basic), Wireframing, Mobile-First Design, Layout
+                Techniques
+              </p>
             </div>
 
             <div className="skill-item">
               <div className="skill-icon">
+                {/* Git Branch Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -329,16 +218,20 @@ const About = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M12 20h9"></path>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <path d="M6 9v6"></path>
+                  <path d="M18 9a9 9 0 0 1-12 9"></path>
                 </svg>
               </div>
-              <h4>Project Management</h4>
-              <p>Agile Methodologies, SCRUM, JIRA, Risk Management, Stakeholder Communication</p>
+              <h4>Version Control</h4>
+              <p>Git, GitHub, Commit History, Branching, Pull Requests</p>
             </div>
 
             <div className="skill-item">
               <div className="skill-icon">
+                {/* Tool Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -353,12 +246,16 @@ const About = () => {
                   <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
               </div>
-              <h4>Technical Skills</h4>
-              <p>SQL, Data Analysis, ERP Systems, CRM Platforms, Cloud Solutions (AWS, Azure)</p>
+              <h4>Development Tools</h4>
+              <p>
+                VS Code, Chrome DevTools, npm, Vite, Netlify, Postman (for
+                testing)
+              </p>
             </div>
 
             <div className="skill-item">
               <div className="skill-icon">
+                {/* People Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -375,11 +272,15 @@ const About = () => {
                 </svg>
               </div>
               <h4>Soft Skills</h4>
-              <p>Communication, Problem-Solving, Critical Thinking, Stakeholder Management, Presentation</p>
+              <p>
+                Team Collaboration, Problem-Solving, Time Management, Continuous
+                Learning
+              </p>
             </div>
 
             <div className="skill-item">
               <div className="skill-icon">
+                {/* Pie Chart Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -393,14 +294,17 @@ const About = () => {
                   <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
                 </svg>
               </div>
-              <h4>Tools & Software</h4>
-              <p>Microsoft Office Suite, Visio, Power BI, Tableau, SAP, Salesforce, ServiceNow</p>
+              <h4>Learning & Growth</h4>
+              <p>
+                Online Courses, Side Projects, Open Source Contributions,
+                YouTube Tutorials
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

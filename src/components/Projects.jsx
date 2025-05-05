@@ -76,38 +76,45 @@ const Projects = () => {
   const certificates = [
     {
       id: 1,
-      title: "Web Development Fundamentals",
-      issuer: "Coursera",
-      date: "May 2023",
-      image: "/placeholder.svg?key=qyq9j",
+      title: "ReactJS For Beginners",
+      issuer: "Linkedin",
+      date: "April 2025",
+      image: "/certificates/cert1.jpg?key=qyq9j",
     },
     {
       id: 2,
-      title: "Python Programming",
-      issuer: "Udemy",
-      date: "August 2023",
-      image: "/placeholder.svg?key=l5lwr",
+      title: "Introduction to DevOps Tools",
+      issuer: "Linkedin",
+      date: "April 2025",
+      image: "/certificates/cert2.jpg?key=l5lwr",
     },
     {
       id: 3,
-      title: "Database Management",
-      issuer: "Microsoft",
-      date: "October 2023",
-      image: "/placeholder.svg?key=9kgpb",
+      title: "Getting Started with NodeJS",
+      issuer: "Linkedin",
+      date: "April 2025",
+      image: "/certificates/cert3.jpg?key=9kgpb",
     },
     {
       id: 4,
-      title: "UI/UX Design Principles",
-      issuer: "Google",
-      date: "January 2024",
-      image: "/placeholder.svg?key=ocvmz",
+      title: "Introduction to Computer Networking",
+      issuer: "Linkedin",
+      date: "April 2025",
+      image: "/certificates/cert4.jpg?key=ocvmz",
     },
     {
       id: 5,
-      title: "Agile Project Management",
-      issuer: "Scrum Alliance",
-      date: "March 2024",
-      image: "/placeholder.svg?key=eh79o",
+      title: "Python for Beginners",
+      issuer: "Linkedin",
+      date: "April 2025",
+      image: "/certificates/cert5.jpg?key=eh79o",
+    },
+    {
+      id: 6,
+      title: "Advance Python",
+      issuer: "Linkedin",
+      date: "April 2025",
+      image: "/certificates/cert6.jpg?key=eh79o",
     },
   ]
 
@@ -155,10 +162,6 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-            <div className="certificate-card see-more-card fade-in">
-              <div className="see-more-icon">+</div>
-              <div className="see-more-text">See More</div>
-            </div>
           </div>
         </div>
       </div>
