@@ -140,7 +140,7 @@ const About = () => {
               <div className="timeline-content">
                 <div className="timeline-date">2023-2024</div>
                 <h4 className="timeline-title">Software Engineering Passer</h4>
-                <div className="timeline-company">WESMARDC</div>
+                <div className="timeline-company">WESMAARRDEC</div>
                 <p className="timeline-description">
                   I successfully passed my Software Engineering subject by
                   developing a Blood Donation App, a mobile application designed
