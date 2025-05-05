@@ -59,6 +59,11 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="https://ladores-blog.netlify.app/" onClick={() => setIsMenuOpen(false)}>
+              Blog
+            </a>
+          </li>
+          <li>
             <a href="#contact" onClick={() => setIsMenuOpen(false)}>
               Contact
             </a>

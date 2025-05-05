@@ -5,7 +5,7 @@ import profileImage from "../assets/R.jpg"
 import "../style/Hero.css"
 
 const Hero = () => {
-  const texts = ["Hola, I'm Ed Joshua", "A System Analyst.", "Bridging business needs with technical solutions."]
+  const texts = ["Hola, I'm Ed Joshua", "A Frontend Developer.", "Bridging business needs with technical solutions."]
   const particlesContainerRef = useRef(null)
 
   const [displayedTexts, setDisplayedTexts] = useState(["", "", ""])
